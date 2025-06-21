@@ -10,12 +10,6 @@ find_package(ament_cmake REQUIRED)
 find_package(ament_cmake_python REQUIRED)
 find_package(rclpy REQUIRED)
 
-# Pythonパッケージのインストール
-ament_python_install_package(${PROJECT_NAME} PACKAGE_DIR src/${PROJECT_NAME})
-
-# スクリプトのインストール
-install(PROGRAMS scripts/executor.py scripts/human_follower.py DESTINATION lib/${PROJECT_NAME})
-
 install(
   DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}/
